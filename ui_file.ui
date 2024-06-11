@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.90.2 -->
+<interface>
+  <!-- interface-name ui_file.ui -->
+  <requires lib="gtk" version="4.12"/>
+  <template class="window" parent="GtkApplicationWindow">
+    <property name="default-height">70</property>
+    <property name="default-width">350</property>
+    <property name="title">pyt_gtk4_spinbutton</property>
+    <child>
+      <object class="GtkBox">
+        <property name="margin-bottom">20</property>
+        <property name="margin-end">20</property>
+        <property name="margin-start">20</property>
+        <property name="margin-top">20</property>
+        <child>
+          <object class="GtkLabel">
+            <property name="hexpand">True</property>
+            <property name="label">Gtk.SpinButton</property>
+            <property name="xalign">0.0</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkSpinButton">
+            <property name="adjustment">
+              <object class="GtkAdjustment">
+                <property name="lower">0.5</property>
+                <property name="page-size">-1e-15</property>
+                <property name="step-increment">0.5</property>
+                <property name="upper">4.000000000000002</property>
+                <property name="value">1.0</property>
+              </object>
+            </property>
+            <property name="digits">1</property>
+            <property name="hexpand">True</property>
+            <property name="numeric">True</property>
+            <signal name="value-changed" handler="on_value_changed"/>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>
